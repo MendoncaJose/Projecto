@@ -18,8 +18,8 @@ const Post = ({ getPost, post: { post, loading } }) => {
     <Spinner />
   ) : (
     <section className='container'>
-      <Link to='/posts' className='btn'>
-        Back To Posts
+      <Link to='/posts' className='btn btn-light'>
+        <i className='fa fa-arrow-circle-left' />
       </Link>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />

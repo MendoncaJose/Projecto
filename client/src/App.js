@@ -16,6 +16,7 @@ import Post from './components/post/Post';
 import NotFound from './components/layout/NotFound';
 import PrivateRoute from './components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
+import Footer from './components/layout/Footer';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -78,6 +79,7 @@ const App = () => {
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </Router>
+      <Footer />
     </Provider>
   );
 };

@@ -17,6 +17,7 @@ const Education = ({ education, deleteEducation }) => {
           onClick={() => deleteEducation(edu._id)}
           className='btn btn-danger'
         >
+          <i className='fas fa-trash' />
           Delete
         </button>
       </td>

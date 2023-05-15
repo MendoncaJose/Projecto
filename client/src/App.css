@@ -17,13 +17,15 @@ body {
   font-family: 'Arial', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(131, 58, 180, 1) 100%
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
   );
+  width: 100%;
+  height: 100%;
   color: #333;
 }
 
@@ -178,85 +180,76 @@ img {
   letter-spacing: 2px;
 }
 
-.button:active {
+.btn-success {
+  border-radius: 10px;
+  display: inline-block;
+  background: #33b249;
+  padding: 0.4rem 1.3rem;
+  transition: opacity 0.2s ease-in;
+  margin-bottom: 10px;
+  width: 80px;
+}
+
+.btn-dislike {
+  border-radius: 10px;
+  display: inline-block;
+  background: #ff5050;
+  padding: 0.4rem 1.3rem;
+  transition: opacity 0.2s ease-in;
+  width: 80px;
+}
+
+.btn-trash {
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  transition: opacity 0.2s ease-in;
+  margin-bottom: 10px;
+  width: 80px;
+}
+
+.btn:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
 }
 
 @media (min-width: 768px) {
-  .button {
+  .btn {
     padding: 0.25em 0.75em;
   }
 }
 
 .btn-career {
-  all: unset;
-  width: 100px;
-  height: 30px;
-  font-size: 14px;
-  background: transparent;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
   border: none;
-  position: relative;
-  color: #f0f0f0;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
-  z-index: 1;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  display: inline-block; /* or display: inline-flex; */
-  margin-right: 50px;
+  outline: none;
+  margin-right: 10px;
 }
 
-.btn-career::after,
-.btn-career::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all 0.4s;
+.btn-career:hover {
+  background-color: #f5d497;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
-.btn-career::before {
-  transform: translate(0%, 0%);
+.btn-career:active {
+  transform: translateY(-1px);
+}
+
+.dash-buttons {
   width: 100%;
-  height: 100%;
-  background: #28282d;
-  border-radius: 10px;
-}
-
-.btn-career::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-}
-
-.btn-career:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
-
-.btn-career:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
-}
-
-.btn-career:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
 }
 
 .badge {
@@ -305,14 +298,6 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
-}
-
-.btn-success,
-.bg-success,
-.badge-success,
-.alert-success {
-  background: var(--success-color);
   color: #fff;
 }
 
@@ -370,12 +355,12 @@ img {
 .form input[type='date'],
 .form select,
 .form textarea {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(131, 58, 180, 1) 100%
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 0%,
+    #ffcc70 100%
   );
   display: block;
   width: 100%;
@@ -416,48 +401,47 @@ button {
 table {
   width: 100%;
   table-layout: fixed;
+  text-align: center;
 }
 .tbl-header {
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.3);
 }
 .tbl-content {
+  text-align: center;
   height: 300px;
   overflow-x: auto;
   margin-top: 0px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 th {
+  border: 1px grey;
   padding: 20px 15px;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 22px;
   color: #fff;
   text-transform: uppercase;
 }
 td {
   padding: 15px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
   color: #fff;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
 .table th,
 .table td {
+  text-align: center;
   padding: 1rem;
   text-align: center;
 }
 
 /* Navbar */
 .navbar {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(131, 58, 180, 1) 100%
-  );
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -480,7 +464,7 @@ td {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: #ffcc70;
 }
 
 .navbar .welcome span {
@@ -490,12 +474,12 @@ td {
 /* Landing Page */
 .landing {
   position: relative;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(131, 58, 180, 1) 100%
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
   );
   height: 100vh;
 }
@@ -739,4 +723,52 @@ td {
   right: 2rem;
   display: inline-block;
   border-radius: 20px;
+}
+
+.footer {
+  height: 50px;
+  margin-top: -50px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  width: 100%;
+  opacity: 0.7;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+}
+
+.reg {
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+}
+
+.log {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+}
+
+.reg:hover {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+  transition: opacity 0.2s ease-in;
+}
+
+.log:hover {
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+  transition: opacity 0.2s ease-in;
 }

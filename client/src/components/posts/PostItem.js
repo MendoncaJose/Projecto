@@ -23,14 +23,18 @@ const PostItem = ({
       <p className='my-1'>{text}</p>
       <p className='post-date'>Posted on {formatDate(date)}</p>
 
-      <button onClick={() => addLike(_id)} type='button' className='btn '>
+      <button
+        onClick={() => addLike(_id)}
+        type='button'
+        className='btn-success'
+      >
         <i className='fas fa-thumbs-up' />{' '}
         <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
       </button>
       <button
         onClick={() => removeLike(_id)}
         type='button'
-        className='btn btn-light'
+        className='btn-dislike'
       >
         <i className='fas fa-thumbs-down' />
       </button>
@@ -44,9 +48,9 @@ const PostItem = ({
         <button
           onClick={() => deletePost(_id)}
           type='button'
-          className='btn btn-danger'
+          className='btn-trash btn-danger'
         >
-          <i className='fas fa-times' />
+          <i className='fas fa-trash' />
         </button>
       )}
     </div>
